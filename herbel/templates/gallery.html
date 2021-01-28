@@ -1,0 +1,37 @@
+{% extends 'playout.html' %}
+{% block content %}
+
+<div class="gallery py-sm-5 py-4">
+	<div class="container py-xl-5 py-lg-3">
+		<h3 class="title mb-sm-4 mb-3">
+			<span>O</span>ur
+			<span>G</span>allery</h3>
+		<div class="row gallery-grids">
+			{% for gallery in gallery %}
+			<div class="col-sm-4 gallery-grid wow fadeInUp animated" data-wow-delay=".5s">
+				<div class="grid">
+					<figure class="effect-apollo">
+						<a class="example-image-link" href="../static/pics/{{gallery.image}}" style="width: 350px; height: 232.97px;" data-lightbox="example-set" data-title="">
+							<img src="../static/pics/{{gallery.image}}" alt="" style="width: 350px; height: 232.97px;" class="img-fluid"/>
+						</a>
+						<figcaption>
+						</figcaption>
+					</figure>
+				</div>
+			</div>
+			{% endfor %}
+		</div>
+	</div>
+</div>
+<!-- //gallery -->
+
+<!-- middle section -->
+<div class="middle-w3l py-sm-5 py-4">
+	<div class="container py-xl-5 py-lg-3">
+		<h2>reach your destination 100% sure and safe</h2>
+		<p class="my-md-4 my-2">Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim.</p>
+		<a href="contact.html" class="btn btn-secondary btn-lg button2-w3l mt-4" role="button" aria-pressed="true">Contact Us</a>
+	</div>
+</div>
+
+{% endblock %}

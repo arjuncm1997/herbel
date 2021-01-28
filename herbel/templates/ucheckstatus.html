@@ -1,0 +1,44 @@
+{% extends 'ulayout.html' %}
+{% block content %}
+
+<div class="contact py-sm-5 py-4">
+	<div class="container py-xl-5 py-lg-3" style="margin-left: 350px;">
+		<h3 class="title mb-sm-4 mb-3">
+			<span>Add</span> product id number
+			<span></span></h3>
+		<div class="row">
+			<div class="col-lg-7 contact-grid-agiles-w3l">
+				<div class="contact-grid-agile">
+					<form action="" method="POST">
+						{{form.hidden_tag()}}
+						<div class="form-group"> 
+                            
+							<div class="form-group">
+                                {% if form.status.errors %}
+                                    {{ form.status(class="form-control form-control-lg is-invalid") }}
+                                    <div class="invalid-feedback">
+                                        {% for error in form.status.errors %}
+                                            <span>{{ error }}</span>
+                                        {% endfor %}
+                                    </div>
+                                {% else %}
+                                    {{ form.status(class="form-control form-control-lg") }}
+                                {% endif %}
+                            </div>
+						</div>
+						
+						
+						<input type="submit" class="btn" value="Submitt">
+					</form>
+				</div>
+				
+			</div>
+			
+		</div>
+	</div>
+</div>
+<!-- //contact -->
+
+<!-- map -->
+
+{% endblock %}

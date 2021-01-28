@@ -1,0 +1,42 @@
+{% extends 'slayout.html' %}
+
+{% block content %}
+<br><br>
+<h2><center>Details </center></h2><br>
+    <table class="css-serial" border="2" style="width:1002px; margin-left:141px; text-align:center;">
+        <tr style="font-weight: bold;">
+            <th>No</th>
+            <td>From</td>
+            <td>To</td>
+            <td>Date</td>
+            <td>Time</td>
+            <td>Description</td>
+            <td colspan=2>Action</th>
+        </tr>
+        {% for tasks in tasks %}
+            <tr>
+                <td></td>
+                <td>{{ tasks.fromplace }}</td>
+                <td>{{ tasks.toplace }}</td>
+                <td>{{ tasks.date }}</td>
+                <td>{{ tasks.time }}</td>
+                <td>{{ tasks.desc }}</td>
+                <td><a href="/sdetailsedit/{{tasks.id}}">Edit</a></td>
+                <td><a href="/sdetailsdelete/{{tasks.id}}">Delete</a</td>
+            </tr>
+        {% endfor %}
+    </table>
+<br><br>
+<style>
+    
+.css-serial {
+    counter-reset: serial-number;  /* Set the serial number counter to 0 */
+  }
+  
+  .css-serial td:first-child:before {
+    counter-increment: serial-number;  /* Increment the serial number counter */
+    content: counter(serial-number);  /* Display the counter */
+  }
+  
+</style>
+{% endblock %}

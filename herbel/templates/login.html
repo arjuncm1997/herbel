@@ -1,0 +1,58 @@
+{% extends 'playout.html' %}
+{% block content %}
+
+
+<div class="about py-sm-5 py-4">
+    <div class="container">
+        <div class="row py-xl-5 py-lg-3">
+            
+            <div class="col-lg-5" style="margin-left: 350px;">
+                <div class="about-right px-lg-4 py-lg-3 p-4">
+                    <form action="" method="POST">
+                        {{form.hidden_tag()}}
+                        <div class="form-group">
+                            <label class="col-form-label">Email</label>
+                            {% if form.email.errors %}
+                                {{ form.email(class="form-control form-control-lg is-invalid") }}
+                                <div class="invalid-feedback">
+                                    {% for error in form.email.errors %}
+                                        <span>{{ error }}</span>
+                                    {% endfor %}
+                                </div>
+                            {% else %}
+                                {{ form.email(class="form-control form-control-lg") }}
+                            {% endif %}
+                        </div>
+                        <div class="form-group">
+                            <label class="col-form-label">Password</label>
+                            {% if form.password.errors %}
+                                {{ form.password(class="form-control form-control-lg is-invalid") }}
+                                <div class="invalid-feedback">
+                                    {% for error in form.password.errors %}
+                                        <span>{{ error }}</span>
+                                    {% endfor %}
+                                </div>
+                            {% else %}
+                                {{ form.password(class="form-control form-control-lg") }}
+                            {% endif %}
+                        </div>
+                        <div class="form-check">
+                            {{ form.remember(class="form-check-input") }}
+                            {{ form.remember.label(class="form-check-label") }}
+                        </div>
+                        <div class="right-w3l">
+                            <input type="submit" class="form-control" value="Login">
+                            <a href="/resetrequest" style="color: white;">Forgot Password ?</a>
+                        </div>
+                        
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+{% endblock %}

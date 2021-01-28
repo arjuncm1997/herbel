@@ -1,0 +1,44 @@
+{% extends 'ulayout.html' %}
+
+{% block content %}
+<br><br>
+<h2><center>Details </center></h2><br>
+    <table class="css-serial" border="2" style="width:1002px; margin-left:141px; text-align:center;">
+        <tr style="font-weight: bold;">
+            <th>No</th>
+            <th>Ship</th>
+            <td>From</td>
+            <td>To</td>
+            <td>Date</td>
+            <td>Time</td>
+            <td>Description</td>
+            <th></th>
+        </tr>
+        {% for details in details %}
+            <tr>
+                <td></td>
+                <td>{{ details.ownername }}</td>
+                <td>{{ details.fromplace }}</td>
+                <td>{{ details.toplace }}</td>
+                <td>{{ details.date }}</td>
+                <td>{{ details.time }}</td>
+                <td>{{ details.desc }}</td>
+                <td><a href="/uproductadd/{{details.id}}">Choose</a></td>
+                
+            </tr>
+        {% endfor %}
+    </table>
+<br><br>
+<style>
+    
+.css-serial {
+    counter-reset: serial-number;  /* Set the serial number counter to 0 */
+  }
+  
+  .css-serial td:first-child:before {
+    counter-increment: serial-number;  /* Increment the serial number counter */
+    content: counter(serial-number);  /* Display the counter */
+  }
+  
+</style>
+{% endblock %}
