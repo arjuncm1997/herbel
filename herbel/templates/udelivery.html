@@ -1,0 +1,123 @@
+{% extends 'ulayout.html' %}
+{%block content%}
+<!------ Include the above in your HEAD tag ---------->
+
+<div class="container">
+    <div class="row">
+    	<div class="col-md-4 col-md-offset-4">
+    		<div class="panel panel-default" style="width: 500px;">
+			  	<div class="panel-heading">
+			    	<h3 class="panel-title"></h3>
+			 	</div>
+			  	<div class="panel-body">
+			    	<form accept-charset="UTF-8" role="form" action="" method="POST">
+                    <fieldset>
+                        {{ form.hidden_tag() }}
+			    	  	<div class="form-group">
+			    		    {{ form.qnty.label(class="form-control-label") }}
+                                    {% if form.qnty.errors %}
+                                        {{ form.qnty(class="form-control form-control-lg is-invalid") }}
+                                        <div class="invalid-feedback">
+                                            {% for error in form.qnty.errors %}
+                                                <span>{{ error }}</span>
+                                            {% endfor %}
+                                        </div>
+                                    {% else %}
+                                        {{ form.qnty(class="form-control form-control-lg") }}
+                                    {% endif %}
+			    		</div>
+			    		<div class="form-group">
+			    			{{ form.name.label(class="form-control-label") }}
+                                    {% if form.name.errors %}
+                                        {{ form.name(class="form-control form-control-lg is-invalid") }}
+                                        <div class="invalid-feedback">
+                                            {% for error in form.name.errors %}
+                                                <span>{{ error }}</span>
+                                            {% endfor %}
+                                        </div>
+                                    {% else %}
+                                        {{ form.name(class="form-control form-control-lg") }}
+                                    {% endif %}
+                        </div>
+                        <div class="form-group">
+			    			{{ form.phone.label(class="form-control-label") }}
+                                    {% if form.phone.errors %}
+                                        {{ form.phone(class="form-control form-control-lg is-invalid") }}
+                                        <div class="invalid-feedback">
+                                            {% for error in form.phone.errors %}
+                                                <span>{{ error }}</span>
+                                            {% endfor %}
+                                        </div>
+                                    {% else %}
+                                        {{ form.phone(class="form-control form-control-lg") }}
+                                    {% endif %}
+                        </div>
+                        <div class="form-group">
+			    			{{ form.address.label(class="form-control-label") }}
+                                    {% if form.address.errors %}
+                                        {{ form.address(class="form-control form-control-lg is-invalid") }}
+                                        <div class="invalid-feedback">
+                                            {% for error in form.address.errors %}
+                                                <span>{{ error }}</span>
+                                            {% endfor %}
+                                        </div>
+                                    {% else %}
+                                        {{ form.address(class="form-control form-control-lg") }}
+                                    {% endif %}
+			    		</div>
+			    		{{ form.submit(class="btn btn-outline-info") }}
+			    	</fieldset>
+			      	</form>
+                      <hr/>
+        
+			    </div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<style>
+
+.white{
+    color:#000;
+    background-color:#fff;
+}
+
+.btn-facebook {
+    color: #ffffff;
+    -webkit-text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    background-color: #2b4b90;
+    *background-color: #133783;
+    background-image: -moz-linear-gradient(top, #3b5998, #133783);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#3b5998), to(#133783));
+    background-image: -webkit-linear-gradient(top, #3b5998, #133783);
+    background-image: -o-linear-gradient(top, #3b5998, #133783);
+    background-image: linear-gradient(to bottom, #3b5998, #133783);
+    background-repeat: repeat-x;
+    border-color: #133783 #133783 #091b40;
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff3b5998', endColorstr='#ff133783', GradientType=0);
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+}
+
+    .btn-facebook:hover,
+    .btn-facebook:focus,
+    .btn-facebook:active,
+    .btn-facebook.active,
+    .btn-facebook.disabled,
+    .btn-facebook[disabled] {
+        color: #ffffff;
+        background-color: #133783 !important;
+        *background-color: #102e6d !important;
+    }
+
+    .btn-facebook:active,
+    .btn-facebook.active {
+        background-color: #0d2456 \9 !important;
+    }
+</style>
+
+
+
+{% endblock %}

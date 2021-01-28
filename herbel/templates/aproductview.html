@@ -1,0 +1,48 @@
+{% extends 'aindex.html'%}
+{% block content %}
+
+
+<div class="main-page">
+  <div class="tables">
+    <h2 class="title1"></h2>
+    <div class="panel-body widget-shadow">
+      <h4>Sellers:</h4>
+      <table class="table">
+        <thead>
+          <tr>
+            
+            <th>Image</th>
+            <th>Name</th>
+            <th>Brand</th>
+            <th>Price</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for user in user %}
+          <tr>
+            <td><span class="image-block">
+                <a class="image-zoom" href="static/pics/{{user.image}}" rel="prettyPhoto[gallery]" style="height: 250px;width: 335px;">
+                   <figure>
+                      <img src="static/pics/{{user.image}}" class="img-fluid" alt="" style="height: 50px;width: 50px;">
+                      <figcaption>
+                         
+                      </figcaption>
+                   </figure>
+                </a>
+             </span></td>
+            <td>{{user.name}} </td>
+            
+           <td>{{user.brand}}</td>
+           <td>{{user.price}}</td>
+           <td>{{user.desc}}</td>
+           </tr>
+          
+          {% endfor%}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

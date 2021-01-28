@@ -1,0 +1,111 @@
+{% extends 'slayout.html' %}
+{% block content %}
+
+<!------ Include the above in your HEAD tag ---------->
+
+
+    <div id="legend">
+      <center><legend class="" style="font-size: 50px;margin-top: 20px;">Add Products</legend></center>
+    </div>
+    <form class="form-horizontal" action="" method="POST" enctype="multipart/form-data" style="margin-left: 480px;">
+        {{form.hidden_tag()}}
+    
+      <fieldset>
+ 
+    <div class="form-group">
+    
+      <div class="controls">
+        {{ form.name.label(class="form-control-label") }}
+                                    {% if form.name.errors %}
+                                        {{ form.name(class="form-control form-control-lg is-invalid") }}
+                                        <div class="invalid-feedback">
+                                            {% for error in form.name.errors %}
+                                                <span>{{ error }}</span>
+                                            {% endfor %}
+                                        </div>
+                                    {% else %}
+                                        {{ form.name(class="form-control form-control-lg") }}
+                                    {% endif %}
+      </div>
+    </div>
+    <div class="form-group">
+        
+        <div class="controls">
+        {{ form.brand.label(class="form-control-label") }}
+                                      {% if form.brand.errors %}
+                                          {{ form.brand(class="form-control form-control-lg is-invalid") }}
+                                          <div class="invalid-feedback">
+                                              {% for error in form.brand.errors %}
+                                                  <span>{{ error }}</span>
+                                              {% endfor %}
+                                          </div>
+                                      {% else %}
+                                          {{ form.brand(class="form-control form-control-lg") }}
+                                      {% endif %}
+         </div>
+      </div>
+      <div class="form-group">
+        
+        <div class="controls">
+        {{ form.desc.label(class="form-control-label") }}
+                                      {% if form.desc.errors %}
+                                          {{ form.desc(class="form-control form-control-lg is-invalid") }}
+                                          <div class="invalid-feedback">
+                                              {% for error in form.desc.errors %}
+                                                  <span>{{ error }}</span>
+                                              {% endfor %}
+                                          </div>
+                                      {% else %}
+                                          {{ form.desc(class="form-control form-control-lg") }}
+                                      {% endif %}
+         </div>
+      </div>
+
+      <div class="form-group">
+       
+        <div class="controls">
+        {{ form.price.label(class="form-control-label") }}
+                                      {% if form.price.errors %}
+                                          {{ form.price(class="form-control form-control-lg is-invalid") }}
+                                          <div class="invalid-feedback">
+                                              {% for error in form.price.errors %}
+                                                  <span>{{ error }}</span>
+                                              {% endfor %}
+                                          </div>
+                                      {% else %}
+                                          {{ form.price(class="form-control form-control-lg") }}
+                                      {% endif %}
+         </div>
+      </div>
+ 
+    
+     
+      
+      <div class="form-group">
+        
+        <div class="controls">
+            {{ form.pic.label() }}
+            {{ form.pic(class="form-control-file") }}
+            {% if form.pic.errors %}
+                {% for error in form.pic.errors %}
+                    <span>{{ error }}</span></br>
+                {% endfor %}
+            {% endif %}
+         </div>
+      </div>
+      <div class="form-group">
+      
+        <div class="controls">
+            {{ form.submit(class="btn btn-outline-info") }}
+      </div>
+      </div>
+  </fieldset>
+</form>
+
+<style>
+.form-control-lg{width: 400px;
+
+}
+</style>
+
+{% endblock %}

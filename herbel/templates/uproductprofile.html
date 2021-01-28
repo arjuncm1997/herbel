@@ -1,0 +1,28 @@
+{% extends 'ulayout.html' %}
+{% block content %}
+<div class="banner-bottom">
+    <div class="container">
+        <div class="col-md-7 banner_bottom_left">
+            <h2 class="title-w3-agileits one">{{cart.name}}</h2>
+            <p><i>Fresh and Local Delivered </i> </p>
+            <h4>Description: {{cart.desc}}</h4>
+            <h4 style="margin-top:10px;">Brand: {{cart.brand}}</h4>
+            <h4 style="margin-top:10px;">Price: {{cart.price}}/-</h4>
+            <div class="more wthree_more1 " style="margin-top:50px;" >
+                <a  href="/udelivery/{{cart.id}}">BUY<span class="glyphicon glyphicon-arrow-right"></span></a>
+            </div>
+        </div>
+        <div class="col-md-5 banner_bottom_right">
+            <div class="img_agile">
+                <img src="../static/pics/{{cart.image}}" style="width: 380px;height: 329px;" class="img-responsive" alt="" />
+            </div>
+
+
+        </div>
+
+        <div class="clearfix"> </div>
+        
+    </div>
+</div>
+
+{% endblock %}

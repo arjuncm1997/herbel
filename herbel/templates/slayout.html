@@ -1,21 +1,15 @@
-<!--
-Author: W3layouts
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
 
 <!DOCTYPE html>
 <html lang="zxx">
 
 <head>
-	<title>Transports</title>
-	<!-- Meta tag Keywords -->
+	<title>Herbel Ayurvedic</title>
+	<!-- custom-theme -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta charset="UTF-8" />
-	<meta name="keywords" content="Transports Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design"
-	/>
-	<script>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="Farm Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+	<script type="application/x-javascript">
 		addEventListener("load", function () {
 			setTimeout(hideURLbar, 0);
 		}, false);
@@ -24,216 +18,253 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			window.scrollTo(0, 1);
 		}
 	</script>
-	<!--// Meta tag Keywords -->
-
-	<!-- Custom-Files -->
-	<link rel="stylesheet" href="../static/css/bootstrap.css">
-	<!-- Bootstrap-Core-CSS -->
-	<link rel="stylesheet" href="../static/css/owl.carousel.min.css" type="text/css" media="all" />
-	<!-- Owl-Carousel-CSS -->
-	<link rel="stylesheet" href="../static/css/style.css" type="text/css" media="all" />
-	<!-- Style-CSS -->
-	<link rel="stylesheet" href="../static/css/fontawesome-all.css">
-	<!-- Font-Awesome-Icons-CSS -->
-	<!-- //Custom-Files -->
-
-	<!-- Web-Fonts -->
-	<link href="//fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;subset=latin-ext"
-	    rel="stylesheet">
-	<link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
-	<!-- //Web-Fonts -->
-
+	<!-- //custom-theme -->
+	<link href="../static/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="../static/css/style.css" rel="stylesheet" type="text/css" media="all" />
+	<!-- //custom-theme -->
+	<!-- font-awesome-icons -->
+	<link href="../static/css/font-awesome.css" rel="stylesheet">
+	<!-- //font-awesome-icons -->
+	<link href="//fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
+	<link href="//fonts.googleapis.com/css?family=Montserrat:200,200i,300,400,400i,500,500i,600,600i,700,700i,800" rel="stylesheet">
 </head>
-<div class="col-md-8">
-	{% with messages = get_flashed_messages(with_categories=true) %}
-	  {% if messages %}
-		{% for category, message in messages %}
-		  <div class="alert alert-{{ category }}">
-			{{ message }}
-		  </div>
-		{% endfor %}
-	  {% endif %}
-	{% endwith %}
-  </div>
-<body>
-	<!-- header -->
-	<header>
-		<!-- navigation -->
-		<nav class="navbar navbar-expand-lg navbar-light bg-light">
-			<a class="navbar-brand" href="/sindex">
-				<i class="fas fa-truck mr-2"></i>Transports</a>
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-			    aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
 
-			<div class="collapse navbar-collapse" id="navbarSupportedContent">
-				<ul class="navbar-nav ml-auto text-center mr-lg-5">
-					<li class="nav-item active mr-lg-2 mb-lg-0 mb-2">
-						<a class="nav-link" href="/sindex">Home
-							<span class="sr-only"></span>
-						</a>
-					</li>
-					<li class="nav-item mr-lg-2 mb-lg-0 mb-2">
-						<a class="nav-link" href="/sprofile/{{current_user.id}}">Profile</a>
-					</li>
-					<li class="nav-item dropdown mr-lg-2 mb-lg-0 mb-2">
-						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-							Details
-						</a>
-						<div class="dropdown-menu">
-							<a class="dropdown-item" href="/sdetailsadd">Add</a>
-							<div class="dropdown-divider"></div>
-							<a class="dropdown-item" href="/sdetailsview">View</a>
+<body>
+	<!-- banner -->
+	<div class="banner1" id="home">
+		<div class="center-container inner_agile">
+			<!-- top_header_agile_info_w3ls -->
+			<div class="top_header_agile_info_w3ls">
+				<nav class="navbar navbar-default">
+					<div class="navbar-header navbar-left">
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+									<span class="sr-only">Toggle navigation</span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+								</button>
+						<h1><a class="navbar-brand" href="/sindex"><span>H</span>erbel</a></h1>
+					</div>
+					<!-- Collect the nav links, forms, and other content for toggling -->
+					<div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
+						<div class="w3l_header_left">
+							
 						</div>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="/sproducts">Shipping Products</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="/scontact">Contact Us</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="/logout">Logout</a>
-					</li>
-				</ul>
-				
+						<div class="clearfix"> </div>
+
+						<div id="m_nav_container" class="m_nav wthree_bg">
+							<nav class="menu menu--sebastian">
+								<ul id="m_nav_list" class="m_nav menu__list">
+									<li class="m_nav_item active" id="m_nav_item_1"> <a href="/sindex" class="link link--kumya"><i class="fa fa-home" aria-hidden="true"></i><span data-letters="Home">Home</span></a></li>
+									<li class="m_nav_item" id="moble_nav_item_3"> <a href="/s_addmaterials" class="link link--kumya"><i class="" aria-hidden="true"></i><span data-letters="Add Products">Add Products</span></a></li>
+									<li class="m_nav_item" id="moble_nav_item_4"> <a href="/smaterialsview" class="link link--kumya"><i class="" aria-hidden="true"></i><span data-letters="Products">Products</span></a></li>
+									<li class="m_nav_item" id="moble_nav_item_4"> <a href="/sordered" class="link link--kumya"><i class="" aria-hidden="true"></i><span data-letters="Ordered Products">Ordered Products</span></a></li>
+									
+									<li class="m_nav_item" id="moble_nav_item_6"> <a href="/scontact" class="link link--kumya"><i class="" aria-hidden="true"></i><span data-letters="Feedback">Feedback</span></a></li>
+									<li class="m_nav_item" id="moble_nav_item_4"> <a href="/logout" class="link link--kumya"><i class="" aria-hidden="true"></i><span data-letters="Logout">Logout</span></a></li>
+									
+								</ul>
+							</nav>
+                        </div>
+					</div>
+				</nav>
 			</div>
-		</nav>
-		<!-- //navigation -->
-		<!-- inner banner -->
-		<div class="inner-banner text-center text-white">
-			<ul class="w3_short">
-				<li>
-					<a href=""></a>
-					<i></i>
-				</li>
-				<li> </li>
+
+			<!--// top_header_agile_info_w3ls -->
+		</div>
+	</div>
+	<!-- //banner -->
+
+	<!-- Modal1 -->
+	<div class="modal fade" id="myModal2" tabindex="-1" role="dialog">
+		<div class="modal-dialog">
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+
+					<div class="signin-form profile">
+						<h3 class="agileinfo_sign">Sign In</h3>
+						<div class="login-form">
+							<form action="#" method="post">
+								<input type="email" name="email" placeholder="E-mail" required="">
+								<input type="password" name="password" placeholder="Password" required="">
+								<div class="tp">
+									<input type="submit" value="Sign In">
+								</div>
+							</form>
+						</div>
+						<div class="login-social-grids">
+							<ul>
+								<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+								<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+								<li><a href="#"><i class="fa fa-rss"></i></a></li>
+							</ul>
+						</div>
+						<p><a href="#" data-toggle="modal" data-target="#myModal3"> Don't have an account?</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //Modal1 -->
+	<!-- Modal2 -->
+	<div class="modal fade" id="myModal3" tabindex="-1" role="dialog">
+		<div class="modal-dialog">
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+
+					<div class="signin-form profile">
+						<h3 class="agileinfo_sign">Sign Up</h3>
+						<div class="login-form">
+							<form action="#" method="post">
+								<input type="text" name="name" placeholder="Username" required="">
+								<input type="email" name="email" placeholder="Email" required="">
+								<input type="password" name="password" placeholder="Password" required="">
+								<input type="password" name="password" placeholder="Confirm Password" required="">
+								<input type="submit" value="Sign Up">
+							</form>
+						</div>
+						<p><a href="#"> By clicking register, I agree to your terms</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //Modal2 -->
+	<div class="services-breadcrumb">
+		<div class="container">
+			<ul>
+				
 			</ul>
 		</div>
-		<!-- //inner banner -->
-	</header>
-	<!-- //header -->
+	</div>
+	<!-- about -->
 
-	<!-- contact -->
+	<!-- //about -->
+    <!-- about-counter -->
+    
 
-
-
-    {%block content%}
-    {%endblock%}
-
-
-	<!--// map -->
-
+{%block content%}
+{% endblock %}
+	
 	<!-- footer -->
-	<footer class="py-md-5 py-4">
+	<div class="footer">
 		<div class="container">
-			<div class="row w3ls_footer_grid text-lg-left text-center pb-lg-5 pb-4 mt-xl-4 mt-1 mb-xl-5 mb-4">
-				<div class="col-lg-5 footer-w3l">
-					<h5>World wide Transport with in 24 hours</h5>
-				</div>
-				<div class="col-lg-7 w3ls_footer_grid1_right text-lg-right text-center">
-					<ul>
-						<li class="mr-3">
-							<a href="index.html" class="active">Home</a>
-						</li>
-						<li class="mr-3">
-							<a href="about.html">About Us</a>
-						</li>
-						<li class="mr-3">
-							<a href="services.html">Services</a>
-						</li>
-						<li class="mr-3">
-							<a href="gallery.html">Gallery</a>
-						</li>
-						<li>
-							<a href="contact.html">Contact Us</a>
-						</li>
-					</ul>
-				</div>
+			<div class="col-md-3 w3agile_footer_grid">
+				<h3>About Us</h3>
+				<p>Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus.
+				</p>
+
 			</div>
-			<div class="row">
-				<div class="col-lg-3 col-6 w3ls_footer_grid_right">
-					<h1>
-						<a href="index.html">
-							<i class="fas fa-truck mr-2"></i>Transports</a>
-					</h1>
-				</div>
-				<div class="col-lg-3 col-6 w3ls_footer_grid_left1_pos mt-2 text-lg-left text-sm-right text-center">
-					<ul>
-						<li class="mr-3">
-							<a href="#" class="facebook">
-								<i class="fab fa-facebook-f mr-2"></i>Facebook</a>
-						</li>
-						<li>
-							<a href="#" class="twitter">
-								<i class="fab fa-twitter mr-2"></i>Twitter</a>
-						</li>
-					</ul>
-				</div>
-				<div class="col-lg-6 w3ls_footer_grid1_left mt-lg-2 mt-4 text-lg-right text-center">
-					<p>&copy; 2018 Transports. All rights reserved | Design by
-						<a href="http://w3layouts.com/">W3layouts</a>
-					</p>
-				</div>
+			<div class="col-md-2 w3agile_footer_grid">
+				<h3>Links</h3>
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="about.html">About</a></li>
+					<li><a href="gallery.html">Gallery</a></li>
+					<li><a href="contact.html">Contact</a></li>
+				</ul>
 			</div>
+			<div class="col-md-4 w3agile_footer_grid">
+				<h3>Twitter Posts</h3>
+				<ul class="w3agile_footer_grid_list">
+					<li>Ut aut reiciendis voluptatibus maiores alias, ut aut reiciendis.
+						<span><i class="fa fa-twitter" aria-hidden="true"></i> 02 days ago</span></li>
+					<li>Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus.
+						<span><i class="fa fa-twitter" aria-hidden="true"></i> 03 days ago</span></li>
+				</ul>
+			</div>
+			<div class="col-md-3 w3agile_footer_grid">
+				<h3>Instagram</h3>
+				<div class="w3agile_footer_grid_left">
+					<a href="single.html"><img src="../static/images/a1.jpg" alt=" " class="img-responsive" /></a>
+				</div>
+				<div class="w3agile_footer_grid_left">
+					<a href="single.html"><img src="../static/images/a2.jpg" alt=" " class="img-responsive" /></a>
+				</div>
+				<div class="w3agile_footer_grid_left">
+					<a href="single.html"><img src="../static/images/a3.jpg" alt=" " class="img-responsive" /></a>
+				</div>
+				<div class="w3agile_footer_grid_left">
+					<a href="single.html"><img src="../static/images/a4.jpg" alt=" " class="img-responsive" /></a>
+				</div>
+				<div class="w3agile_footer_grid_left">
+					<a href="single.html"><img src="../static/images/a1.jpg" alt=" " class="img-responsive" /></a>
+				</div>
+				<div class="w3agile_footer_grid_left">
+					<a href="single.html"><img src="../static/images/a2.jpg" alt=" " class="img-responsive" /></a>
+				</div>
+				<div class="w3agile_footer_grid_left">
+					<a href="single.html"><img src="../static/images/a3.jpg" alt=" " class="img-responsive" /></a>
+				</div>
+				<div class="w3agile_footer_grid_left">
+					<a href="single.html"><img src="../static/images/a4.jpg" alt=" " class="img-responsive" /></a>
+				</div>
+				<div class="w3agile_footer_grid_left">
+					<a href="single.html"><img src="../static/images/a3.jpg" alt=" " class="img-responsive" /></a>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+			<div class="clearfix"> </div>
 		</div>
-	</footer>
+	</div>
+	<div class="agileinfo_copy_right">
+		<div class="container">
+			<div class="agileinfo_copy_right_left">
+				<p>© 2021 Herbel Ayurvedic. All rights reserved | Design by <a href="">Herbel Ayurvedic</a></p>
+			</div>
+			<div class="agileinfo_copy_right_right">
+				<ul class="social">
+					<li><a class="social-linkedin" href="#">
+						<i class="fa fa-facebook" aria-hidden="true"></i>
+						<div class="tooltip"><span>Facebook</span></div>
+						</a></li>
+					<li><a class="social-twitter" href="#">
+						<i class="fa fa-twitter" aria-hidden="true"></i>
+						<div class="tooltip"><span>Twitter</span></div>
+						</a></li>
+					<li><a class="social-google" href="#">
+						<i class="fa fa-google" aria-hidden="true"></i>
+						<div class="tooltip"><span>Google+</span></div>
+						</a></li>
+					<li><a class="social-facebook" href="#">
+						<i class="fa fa-pinterest-p" aria-hidden="true"></i>
+						<div class="tooltip"><span>Pinterest</span></div>
+						</a></li>
+					<li><a class="social-instagram" href="#">
+						<i class="fa fa-instagram" aria-hidden="true"></i>
+						<div class="tooltip"><span>Instagram</span></div>
+						</a></li>
+				</ul>
+			</div>
+			<div class="clearfix"> </div>
+		</div>
+	</div>
 	<!-- //footer -->
+	<!-- js -->
+	<script type="text/javascript" src="../static/js/jquery-2.1.4.min.js"></script>
+	<!-- //js -->
+	<script src="../static/js/bars.js"></script>
 
-
-	<!-- Js files -->
-	<!-- JavaScript -->
-	<script src="../static/js/jquery-3.3.1.min.js"></script>
-	<!-- Default-JavaScript-File -->
-
-	<script src="../static/js/bootstrap.js"></script>
-	<!-- Necessary-JavaScript-File-For-Bootstrap -->
-
-	<!-- search -->
-	<script src="../static/js/search.js"></script>
-
-	<!-- smooth scrolling -->
-	<script src="../static/js/SmoothScroll.min.js"></script>
-	<!-- //smooth scrolling -->
-
-	<!-- start-smoth-scrolling -->
-	<script src="../static/js/move-top.js"></script>
-	<script src="../static/js/easing.js"></script>
+	<!-- Stats-Number-Scroller-Animation-JavaScript -->
+	<script src="../static/js/waypoints.min.js"></script>
+	<script src="../static/js/counterup.min.js"></script>
 	<script>
 		jQuery(document).ready(function ($) {
-			$(".scroll").click(function (event) {
-				event.preventDefault();
-				$('html,body').animate({
-					scrollTop: $(this.hash).offset().top
-				}, 1000);
+			$('.counter').counterUp({
+				delay: 10,
+				time: 1000
 			});
 		});
 	</script>
-	<!-- start-smoth-scrolling -->
-
-	<!-- smooth scrolling-bottom-to-top -->
-	<script>
-		$(document).ready(function () {
-			/*
-				var defaults = {
-				containerID: 'toTop', // fading element id
-				containerHoverID: 'toTopHover', // fading element hover id
-				scrollSpeed: 1200,
-				easingType: 'linear' 
-				};
-			*/
-			$().UItoTop({
-				easingType: 'easeOutQuart'
-			});
-		});
-	</script>
-	<a href="#" id="toTop" style="display: block;">
-		<span id="toTopHover" style="opacity: 1;"> </span>
-	</a>
-	<!-- //smooth scrolling-bottom-to-top -->
-	<!-- //Js files -->
-
+	<!-- //Stats-Number-Scroller-Animation-JavaScript -->
+	<!-- //load-more -->
+	<!-- for bootstrap working -->
+	<script src="../static/js/bootstrap.js"></script>
+	<!-- //for bootstrap working -->
 </body>
 
 </html>

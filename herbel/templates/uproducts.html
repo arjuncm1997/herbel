@@ -1,0 +1,33 @@
+{% extends 'ulayout.html' %}
+{% block content %}
+<div class="services">
+    <div class="container">
+        <h3 class="title-w3-agileits two">Products We Have</h3>
+        <p class="quia">Buy</p>
+        <div class="wthree_services_bottom_left banner_bottom_agile_grids">
+            <div class="wthree_services_bottom_left_grid">
+                {% for pro in pro %}
+                <div class="col-md-4 w3_agileits_services_bottom_l_grid">
+                    <div class="agile_services_bottom_l_grid1">
+                        <img src="../static/pics/{{pro.image}}" style="width: 349.990px;height: 237.083px;" alt=" " class="img-responsive" />
+                        <div class="w3_service_bottom_grid_pos">
+                            <h3>{{pro.name}}</h3>
+                        </div>
+                    </div>
+                    <div class="serve_info_agile two">
+                        <h2>{{pro.name}}</h2>
+                        <h4>{{pro.brand}}</h4>
+                        <p>{{pro.price}}/-</p>
+                        <a href="/ucartadd/{{pro.id}}"><button style="margin-top:20px;">Add To Cart</button></a>
+                    </div>
+                </div>
+                {% endfor %}
+                <div class="clearfix"> </div>
+                
+            </div>
+
+        </div>
+    </div>
+</div>
+
+{% endblock %}
