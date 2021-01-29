@@ -88,3 +88,15 @@ class Imageupdate(FlaskForm):
     name = StringField('Name',validators=[DataRequired(), Length(min=5, max=40)])
     pic = FileField('Upload Picture', validators=[FileAllowed(['jpg', 'png','jpeg'])])
     submit = SubmitField('Save')
+
+
+
+class Profile(FlaskForm):
+    username = StringField('Username',
+                           validators=[DataRequired(), Length(min=2, max=20)])
+    address = StringField('Address')
+    phone = StringField('Contact No')
+    email = StringField('Email',
+                        validators=[DataRequired(), Email()])
+    pic = FileField('Upload Picture', validators=[FileAllowed(['jpg', 'png','jpeg'])])
+    submit = SubmitField('Submitt')

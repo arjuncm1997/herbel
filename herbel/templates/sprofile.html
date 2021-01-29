@@ -1,5 +1,10 @@
-{% extends 'slayout.html' %}
-{% block content%}
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+
+<link rel="stylesheet" href="https://bootswatch.com/4/simplex/bootstrap.min.css"/>
 <html>
 
 
@@ -20,7 +25,7 @@
                                     </div>
                                 </div>
                                 <div class="userData ml-3">
-                                    <h2 class="d-block" style="font-size: 1.5rem; font-weight: bold"><a href="javascript:void(0);">Some Name</a></h2>
+                                    <h2 class="d-block" style="font-size: 1.5rem; font-weight: bold"><a href="javascript:void(0);"></a></h2>
                                     <h6 class="d-block">{{current_user.username}}</h6>
                                     <h6 class="d-block">{{current_user.email}}</h6>
                                 </div>
@@ -37,7 +42,7 @@
                                         <a class="nav-link active" id="basicInfo-tab" data-toggle="tab" href="#basicInfo" role="tab" aria-controls="basicInfo" aria-selected="true">Basic Info</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" id="connectedServices-tab" data-toggle="tab" href="#connectedServices" role="tab" aria-controls="connectedServices" aria-selected="false">Connected Services</a>
+                                        <a class="nav-link" id="connectedServices-tab" data-toggle="tab" href="" role="tab" aria-controls="connectedServices" aria-selected="false"></a>
                                     </li>
                                 </ul>
                                 <div class="tab-content ml-1" id="myTabContent">
@@ -141,9 +146,9 @@
                                         
                                         <div> {{ form.submit(class="btn btn-outline-info") }}</div>
                                     </div>
-                                </form>
+                                </form><a href="/sindex">Back to home...</a>
                                     <div class="tab-pane fade" id="connectedServices" role="tabpanel" aria-labelledby="ConnectedServices-tab">
-                                        Facebook, Google, Twitter Account that are connected to this account
+                                       
                                     </div>
                                 </div>
                             </div>
@@ -242,4 +247,3 @@ $(document).ready(function () {
 </script>
 
 
-{% endblock %}
