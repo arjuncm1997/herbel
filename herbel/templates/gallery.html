@@ -162,46 +162,18 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 			<div class="wthree_services_bottom_left banner_bottom_agile_grids">
 				<div class="wthree_services_bottom_left_grid">
+					{% for gallery in gallery %}
 					<div class="col-md-4 w3_agileits_services_bottom_l_grid" style="padding-top: 20px;">
 						<div class="agile_services_bottom_l_grid1">
-							<img src="../static/images/1.jpg" style="width: 350px;height: 237px;" alt=" " class="img-responsive" />
+							<img src="../static/pics/{{gallery.img}}" style="width: 350px;height: 237px;" alt=" " class="img-responsive" />
 							<div class="w3_service_bottom_grid_pos">
-								<h3>Farm</h3>
+								<h3>{{gallery.name}}</h3>
 							</div>
 						</div>
 					</div>
-					<div class="col-md-4 w3_agileits_services_bottom_l_grid" style="padding-top: 20px;">
-						<div class="agile_services_bottom_l_grid1">
-							<img src="../static/images/1.jpg" alt=" " class="img-responsive" />
-							<div class="w3_service_bottom_grid_pos">
-								<h3>Farm</h3>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-4 w3_agileits_services_bottom_l_grid" style="padding-top: 20px;">
-						<div class="agile_services_bottom_l_grid1">
-							<img src="../static/images/1.jpg" alt=" " class="img-responsive" />
-							<div class="w3_service_bottom_grid_pos">
-								<h3>Farm</h3>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-4 w3_agileits_services_bottom_l_grid" style="padding-top: 20px;">
-						<div class="agile_services_bottom_l_grid1">
-							<img src="../static/images/1.jpg" alt=" " class="img-responsive" />
-							<div class="w3_service_bottom_grid_pos">
-								<h3>Farm</h3>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-4 w3_agileits_services_bottom_l_grid" style="padding-top: 20px;">
-						<div class="agile_services_bottom_l_grid1">
-							<img src="../static/images/1.jpg" alt=" " class="img-responsive" />
-							<div class="w3_service_bottom_grid_pos">
-								<h3>Farm</h3>
-							</div>
-						</div>
-					</div>
+
+					{% endfor %}
+
 					<div class="clearfix"> </div>
 				</div>
 
